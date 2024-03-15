@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\WeatherForecastController.cs" />
+    <Compile Remove="WeatherForecast.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Apis.Auth" Version="1.67.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CloudStoragePratic.Domain\CloudStoragePratic.Domain.csproj" />
+    <ProjectReference Include="..\CloudStoragePraticApplication\CloudStoragePratic.Application.csproj" />
+    <ProjectReference Include="..\CloudStoragePraticInfrasstructure\CloudStoragePratic.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
